@@ -1,0 +1,35 @@
+# --- Node (frontend) ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# --- PHP / Composer (backend) ---
+/vendor/
+composer.lock
+
+# --- Environment files (keep the .example versions) ---
+.env
+.env.local
+.env.*.local
+
+# --- Databases ---
+*.sqlite
+*.sqlite3
+*.db
+
+# --- Laravel runtime / caches ---
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*
+/public/storage
+/storage/app/public/*
+/.phpunit.cache
+
+# --- Editor / OS ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
