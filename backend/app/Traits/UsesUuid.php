@@ -17,7 +17,7 @@ trait UsesUuid
     {
         static::creating(function (Model $model): void {
             if (empty($model->uuid)) {
-                $model->uuid = Str::uuid()->toString();
+                $model->uuid = Str::uuid7()->toString();
             }
         });
     }
