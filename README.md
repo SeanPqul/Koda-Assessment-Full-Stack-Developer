@@ -1,8 +1,10 @@
 # Client Project Tracker
 
+![Client Project Tracker — project list](docs/screenshots/front-end-screenshot.png)
+
 A full-stack **Client Project Tracker** for a digital agency. Project managers can create, update, view, and delete client projects, track their status/priority, and search, filter, and sort across them.
 
-See [ASSESSMENT.md](ASSESSMENT.md), [REQUIREMENTS.md](REQUIREMENTS.md) and [SUBMISSION.md](SUBMISSION.md) for the original brief, and [TECHNICAL_REFLECTION.md](TECHNICAL_REFLECTION.md) for the submission reflection.
+See [docs/ASSESSMENT.md](docs/ASSESSMENT.md), [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) and [docs/SUBMISSION.md](docs/SUBMISSION.md) for the original brief, and [docs/TECHNICAL_REFLECTION.md](docs/TECHNICAL_REFLECTION.md) for the submission reflection.
 
 ---
 
@@ -42,11 +44,12 @@ See [ASSESSMENT.md](ASSESSMENT.md), [REQUIREMENTS.md](REQUIREMENTS.md) and [SUBM
 │       ├── features/projects/   # projects list, table, dialogs, forms
 │       ├── components/          # UI + data-table + app shell
 │       └── lib/                 # api-client, mock-api, handle-server-error
-├── ASSESSMENT.md            # original assessment brief
-├── REQUIREMENTS.md
-├── SUBMISSION.md
-├── test_data.json           # seed fixture (12 projects)
-└── TECHNICAL_REFLECTION.md
+├── docs/                    # original brief + submission reflection
+│   ├── ASSESSMENT.md
+│   ├── REQUIREMENTS.md
+│   ├── SUBMISSION.md
+│   └── TECHNICAL_REFLECTION.md
+└── test_data.json           # seed fixture (12 projects)
 ```
 
 ---
@@ -152,4 +155,4 @@ Base URL: `/api` (proxied to `http://127.0.0.1:8000` in dev).
 
 ## AI Tools
 
-This project was built with **Claude Code** (Anthropic) as an assistant — see [TECHNICAL_REFLECTION.md](TECHNICAL_REFLECTION.md) for full disclosure.
+This project was built with the help of AI coding assistants — see [docs/TECHNICAL_REFLECTION.md](docs/TECHNICAL_REFLECTION.md) for full disclosure.
