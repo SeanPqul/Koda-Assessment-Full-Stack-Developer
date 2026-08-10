@@ -18,7 +18,7 @@ Route → FormRequest → Controller → ServiceInterface → Service → Reposi
 
 **Declarative filtering (EloquentFilter).** I mirror the pattern used in a real production Laravel codebase: query filtering lives in a `ModelFilter` class (`ProjectFilter`) instead of a pile of `when()` clauses in the repository. It keeps the repository a clean one-liner and scales to many filters without ballooning.
 
-**A dev-only mock API.** Because the backend was built after the frontend, the UI ships with an in-browser mock adapter (seeded from the same `test_data.json`) gated behind `VITE_USE_MOCK`. This let me develop and verify the entire UI before the API existed, and it's still how someone can run the frontend standalone.
+**A dev-only mock API.** Because the backend was built after the frontend, I added an in-browser mock adapter (seeded from the same `test_data.json`) gated behind `VITE_USE_MOCK`. This let me develop and verify the entire UI before the API existed. In production the app talks to the real Laravel API — the mock is purely a local development shortcut, never a substitute for the backend.
 
 ## 2. What tradeoffs did you make?
 

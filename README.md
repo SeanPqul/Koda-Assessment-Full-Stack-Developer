@@ -15,7 +15,7 @@ See [docs/ASSESSMENT.md](docs/ASSESSMENT.md), [docs/REQUIREMENTS.md](docs/REQUIR
 - TanStack Query for server state, TanStack Table for the data grid
 - react-hook-form + Zod for form validation
 - Server-driven search / filter / sort / pagination, with table state synced to the URL
-- A dev-only in-browser mock API (`VITE_USE_MOCK=true`) so the UI is fully runnable without the backend
+- A dev-only in-browser mock API (`VITE_USE_MOCK=true`) to iterate on the UI quickly during development — the real Laravel API is the default
 
 **Backend** (`backend/`) — Laravel 13 + PHP 8.4
 - Used **Interface-Service-Repository** architecture (`app/Interface`, `app/Service`, `app/Repository`)
@@ -88,7 +88,7 @@ Two modes:
 
 | Mode | `.env` | Behavior |
 |---|---|---|
-| **Mock** (frontend-only) | `VITE_USE_MOCK=true` | In-browser API seeded from `test_data.json` — no backend needed |
+| **Mock** (dev convenience) | `VITE_USE_MOCK=true` | In-browser API seeded from `test_data.json` for fast UI development |
 | **Full stack** (default) | `VITE_USE_MOCK=false` | Vite dev server proxies `/api` → `http://127.0.0.1:8000` (the Laravel backend) |
 
 With both servers running, open **http://localhost:5173** — the UI talks to the real Laravel + SQLite backend.
