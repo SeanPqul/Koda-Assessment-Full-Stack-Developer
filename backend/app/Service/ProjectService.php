@@ -5,7 +5,7 @@ namespace App\Service;
 use App\Http\Resources\ProjectResource;
 use App\Interface\Repository\ProjectRepositoryInterface;
 use App\Interface\Service\ProjectServiceInterface;
-use Illuminate\Http\Response;
+use Symfony\Component\HttpFoundation\Response;
 
 class ProjectService implements ProjectServiceInterface
 {
