@@ -4,9 +4,9 @@ namespace App\Interface\Service;
 
 interface ProjectServiceInterface
 {
-    public function findProjects(object $payload);
+    public function listProjects(object $payload);
 
-    public function findProject(string $uuid);
+    public function findProjectByUuid(string $uuid);
 
     public function createProject(object $payload);
 

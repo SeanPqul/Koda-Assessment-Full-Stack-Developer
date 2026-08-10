@@ -14,7 +14,7 @@ class ProjectService implements ProjectServiceInterface
     ) {
     }
 
-    public function findProjects(object $payload)
+    public function listProjects(object $payload)
     {
         $paginator = $this->projectRepository->findMany($payload);
 
@@ -29,7 +29,7 @@ class ProjectService implements ProjectServiceInterface
         ];
     }
 
-    public function findProject(string $uuid)
+    public function findProjectByUuid(string $uuid)
     {
         $project = $this->projectRepository->findByUuid($uuid);
 
@@ -44,7 +44,9 @@ class ProjectService implements ProjectServiceInterface
 
     public function createProject(object $payload)
     {
-        return new ProjectResource($this->projectRepository->create($payload));
+        $resource = new ProjectResource($this->projectRepository->create($payload));
+
+        return $resource->response()->setStatusCode(201);
     }
 
     public function updateProject(object $payload, string $uuid)

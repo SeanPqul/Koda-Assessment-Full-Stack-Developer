@@ -11,22 +11,21 @@ class ProjectController extends Controller
 {
     public function __construct(
         private readonly ProjectServiceInterface $projectService,
-    ) {
-    }
+    ) { }
 
     public function index(Request $request)
     {
-        return $this->projectService->findProjects($request);
+        return $this->projectService->listProjects($request);
     }
 
     public function show(string $uuid)
     {
-        return $this->projectService->findProject($uuid);
+        return $this->projectService->findProjectByUuid($uuid);
     }
 
     public function store(StoreProjectRequest $request)
     {
-        return $this->projectService->createProject($request)->response()->setStatusCode(201);
+        return $this->projectService->createProject($request);
     }
 
     public function update(UpdateProjectRequest $request, string $uuid)
